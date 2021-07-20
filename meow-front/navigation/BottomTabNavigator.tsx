@@ -35,7 +35,7 @@ export default function BottomTabNavigator() {
         component={StepTwoNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
-          tabBarVisible: false,
+          // tabBarVisible: false,
         }}
       />
     </BottomTab.Navigator>

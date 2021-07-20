@@ -8,11 +8,11 @@ router.get("/", async (req, res) => {
         let {color} = req.query;
 
         //Validates whether the cat color is valid or not
-        if(color = 'grey' || 'white' || 'brown'){
+        if(color === 'grey' || color === 'white' || color === 'brown'){
             let catJson = JSON.parse(cats)
 
             let selectedCat = catJson[color]
-            
+
             return res.send({data: selectedCat}).status(200)
         }
     } catch (error) {

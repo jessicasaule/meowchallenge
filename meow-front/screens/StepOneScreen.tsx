@@ -12,9 +12,8 @@ export default function StepOneScreen({}) {
   const handlePress = async (color: string) => {
     try {
       let response = await fetch(
-        `http://192.168.0.134:3001/?color=${color}`
+        `http://192.168.0.25:3001/?color=${color}`
       )
-
       const responseJson = await response.json();
       setImg(responseJson.data.img)
 
@@ -23,7 +22,7 @@ export default function StepOneScreen({}) {
     }
   }
 
-  setImg("https://meowtel.com/img/assets/meowtel-cat-mascot-footer.png")
+  // setImg("https://meowtel.com/img/assets/meowtel-cat-mascot-footer.png")
 
   return (
     <View style={styles.container}>
@@ -54,7 +53,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 50
+    marginBottom: 50,
+    color: 'white'
   },
   separator: {
     marginVertical: 30,
